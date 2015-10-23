@@ -1,0 +1,110 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1, minimum-scale=1" />
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" href="css/specimen_files/specimen_stylesheet.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8" />
+  <style>
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'oswaldbold';
+  font-size: 105px;
+  overflow: hidden;
+}
+
+#wrap {
+  overflow: hidden;
+  margin-top: -2px;
+  margin-left: -3px;
+}
+
+#button-link {
+  position: absolute;
+  z-index: 99;
+}
+
+#button {
+  width: 255px;
+  height: 240px;
+}
+
+#button span {
+  font-size: 27px;
+  color: #fff;
+}
+
+a:link {
+    color: #A5A5DB;
+}
+
+a:visited {
+    color: #A5A5DB;
+}
+
+a:hover {
+    color: #A5A5DB;
+}
+
+a:active {
+    color: #A5A5DB;
+}
+
+#touch {
+	font-family: oswaldlight;
+	font-size: 19px !important;
+}
+</style>
+</head>
+
+<body>
+<div id="wrap">
+  <a id="button-link" href="hate.html">
+    <div id="button">
+      Free insult! <br /><span id="nsfw-span">** NSFW ** </span><span id="touch">(touch to continue)</span>
+    </div>
+  </a>
+</div>
+<script type="text/javascript">
+
+function timeout() {
+  setTimeout(function () {
+    var obj=document.getElementsByTagName('html')[0];
+    var obj1=document.getElementById('button-link');
+	var obj2=document.getElementById('nsfw-span');
+	var obj3=document.getElementById('touch');
+	
+    var w=obj.offsetWidth;
+    var h=obj.offsetHeight;
+
+    var l=Math.floor(Math.random()*w);
+    var t=-2;
+
+    if(l>w-obj1.offsetWidth){
+      l=w-obj1.offsetWidth;
+    }
+    if(t>h-obj1.offsetHeight){
+      t=h-obj1.offsetHeight;
+    }
+    obj1.style.left=l+'px';
+    obj1.style.top=t+'px';
+	obj1.className='pstn';
+	var colorpick = ['#FFFF59', '#A5A5DB', '#FF3300', '#669766'];
+	var colorpick_nsfw = ['#FFFFFF', '#CCCCCC', '#AAAAAA', '#777777'];
+	var colorpicked_nsfw = colorpick_nsfw[Math.floor(Math.random() * colorpick_nsfw.length)];
+	obj1.style.color = colorpick[Math.floor(Math.random() * colorpick.length)];
+	obj2.style.color = colorpicked_nsfw;
+	obj3.style.color = colorpicked_nsfw;
+    
+    timeout();
+  }, 30000);
+}
+
+(function() {
+  timeout();
+})();
+</script>
+
+</body>
+</html>
