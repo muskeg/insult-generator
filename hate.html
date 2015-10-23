@@ -1,0 +1,79 @@
+<html>
+<head>
+  <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, user-scalable=no, maximum-scale=1, minimum-scale=1" />
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" href="css/specimen_files/specimen_stylesheet.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8" />
+
+  <style>
+body {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  overflow: hidden;
+}
+
+#insult {
+  font-family: 'oswaldbold';
+  font-size: 55px;
+}
+
+#button {
+  font-family: 'oswaldregular';
+  font-size: 45px;
+  position: absolute;
+  bottom: 3px;
+  right: 2px;
+}
+
+#button span {
+  font-size: 15px;
+}
+
+a:link {
+    color: #A5A5DB;
+}
+
+a:visited {
+    color: #A5A5DB;
+}
+
+a:hover {
+    color: #A5A5DB;
+}
+
+a:active {
+    color: #A5A5DB;
+}
+
+
+</style>
+</head>
+
+<body>
+<a href="javascript:location.reload(true)">
+  <div id="insult">
+
+  </div>
+  <div id="button">
+    Again!
+  </div>
+</a>
+<script type="text/javascript" src="jquery-2.1.3.min.js"></script>
+<script>
+  (function() {
+    var mot1 = ["lazy", "stupid", "insecure", "idiotic", "slimy", "slutty", "smelly", "pompous", "communist", "dicknose", "pie-eating", "racist", "elitist", "white trash", "drug-loving", "butterface", "tone deaf", "ugly", "creepy","lazy", "stupid", "insecure", "idiotic", "slimy", "slutty", "smelly", "pompous", "communist", "dicknose", "pie-eating", "racist", "elitist", "white trash", "drug-loving", "butterface", "tone deaf", "ugly", "creepy","lazy", "stupid", "insecure", "idiotic", "slimy", "slutty", "smelly", "pompous", "communist", "dicknose", "pie-eating", "racist", "elitist", "white trash", "drug-loving", "butterface", "tone deaf", "ugly", "creepy","lazy", "stupid", "insecure", "idiotic", "slimy", "slutty", "smelly", "pompous", "communist", "dicknose", "pie-eating", "racist", "elitist", "white trash", "drug-loving", "butterface", "tone deaf", "ugly", "creepy","lazy", "stupid", "insecure", "idiotic", "slimy", "slutty", "smelly", "pompous", "communist", "dicknose", "pie-eating", "racist", "elitist", "white trash", "drug-loving", "butterface", "tone deaf", "ugly", "creepy"]
+    var mot2 = ["douche", "ass", "turd", "rectum", "butt", "cock", "shit", "crotch", "turd", "prick", "slut", "taint", "fuck", "dick", "boner", "shart", "nut", "sphincter","douche", "ass", "turd", "rectum", "butt", "cock", "shit", "crotch", "turd", "prick", "slut", "taint", "fuck", "dick", "boner", "shart", "nut", "sphincter","douche", "ass", "turd", "rectum", "butt", "cock", "shit", "crotch", "turd", "prick", "slut", "taint", "fuck", "dick", "boner", "shart", "nut", "sphincter","douche", "ass", "turd", "rectum", "butt", "cock", "shit", "crotch", "turd", "prick", "slut", "taint", "fuck", "dick", "boner", "shart", "nut", "sphincter","douche", "ass", "turd", "rectum", "butt", "cock", "shit", "crotch", "turd", "prick", "slut", "taint", "fuck", "dick", "boner", "shart", "nut", "sphincter"]
+    var mot3 = ["pilot", "canoe", "captain", "pirate", "hammer", "knob", "box", "jockey", "nazi", "waffle", "goblin", "blossum", "biscuit", "clown", "socket", "monster", "hound", "dragon", "balloon","pilot", "canoe", "captain", "pirate", "hammer", "knob", "box", "jockey", "nazi", "waffle", "goblin", "blossum", "biscuit", "clown", "socket", "monster", "hound", "dragon", "balloon","pilot", "canoe", "captain", "pirate", "hammer", "knob", "box", "jockey", "nazi", "waffle", "goblin", "blossum", "biscuit", "clown", "socket", "monster", "hound", "dragon", "balloon","pilot", "canoe", "captain", "pirate", "hammer", "knob", "box", "jockey", "nazi", "waffle", "goblin", "blossum", "biscuit", "clown", "socket", "monster", "hound", "dragon", "balloon","pilot", "canoe", "captain", "pirate", "hammer", "knob", "box", "jockey", "nazi", "waffle", "goblin", "blossum", "biscuit", "clown", "socket", "monster", "hound", "dragon", "balloon"]
+    var insulte = "You " + mot1[Math.floor(Math.random() * mot1.length)] + " " + mot2[Math.floor(Math.random() * mot2.length)] + " " + mot3[Math.floor(Math.random() * mot3.length)] + "!"
+    //$.get( "tts.php", { txt: insulte } ).done(function( data ) {
+	//	$('<audio id="insulteAudio"><source src="insulte.mp3" type="audio/mpeg"></audio>').appendTo('body');
+	//	$('#insulteAudio')[0].play();
+	//});
+	document.getElementById("insult").innerHTML = insulte;
+    setTimeout(function(){window.location.href='index.html'},8500);
+  })();
+</script>
+</body>
+</html>
